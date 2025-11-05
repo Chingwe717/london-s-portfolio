@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio website for academic showcase">
+    <title>EMMANUEL'S PORTFOLIO - Login</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-page">
+        <div class="container login-container">
+            <form class="login-form" id="loginForm">
+                <h2>WELCOME TO EMMANUEL'S PORTFOLIO</h2>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" maxlength="20">
+                    <div class="error" id="username-error">Username must be at least 4 characters long</div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" placeholder="Enter your password" maxlength="12">
+                        <button type="button" class="password-toggle" id="password-toggle">Show</button>
+                    </div>
+                    <div class="error" id="password-error">Password must be at least 8 characters long</div>
+                    <div class="password-requirements">Password must be at least 8 characters</div>
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember Me</label>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Home Page -->
+    <div id="home-page" style="display: none;">
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">LONDON'S PORTFOLIO</div>
+                    <ul class="nav-links">
+                        <li><a href="#home-page">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Academic Results</a>
+                            <div class="dropdown-content">
+                                <a href="#year1-page">Year 1 Results</a>
+                                <a href="#year2-page">Year 2 Results</a>
+                                <a href="#year3-page">Year 3 Results</a>
+                                <a href="#year4-page">Year 4 Results</a>
+                            </div>
+                        </li>
+                        <li><a href="#hobbies-page">My Hobbies</a></li>
+                        <li><a href="#goals-page">Career Goals</a></li>
+                        <li><a href="#" id="logout-link">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="welcome-message">
+                <h2>Welcome, <span id="student-name">Emmanuel Chingwe</span>!</h2>
+                <p>Today is <span class="date-time" id="current-date-time"></span></p>
+            </div>
+
+            <div class="profile-section">
+                <!-- Profile Picture - Replace with your own image -->
+                <!-- Recommended size: 400x400px, square format -->
+                <img src="p.jpg.jpg" alt="Emmanuel Chingwe" class="profile-img">
+                <div class="profile-info">
+                    <h2>About Me</h2>
+                    <p>Hello! I'm Emmanuel Chingwe, a passionate web development student with a keen interest in creating interactive and user-friendly websites. I have experience with HTML, CSS, JavaScript, and various web frameworks. I enjoy solving complex problems and continuously learning new technologies to enhance my skills.</p>
+                    <p>When I'm not coding, you can find me playing basketball, reading tech blogs, hiking, or experimenting with photography. I believe in the power of technology to transform lives and am excited to be part of this ever-evolving field.</p>
+                </div>
+            </div>
+
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'><rect width='600' height='400' fill='%232c3e50'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='white'>Project 1 - Web Design</text></svg>" alt="Project 1">
+                </div>
+                <div class="mySlides fade">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'><rect width='600' height='400' fill='%233498db'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='white'>Project 2 - App Development</text></svg>" alt="Project 2">
+                </div>
+                <div class="mySlides fade">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'><rect width='600' height='400' fill='%232ecc71'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='white'>Project 3 - Database Design</text></svg>" alt="Project 3">
+                </div>
+                <div class="mySlides fade">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23e74c3c'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='white'>Project 4 - UI/UX Design</text></svg>" alt="Project 4">
+                </div>
+                <div class="mySlides fade">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23f39c12'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='white'>Project 5 - Mobile App</text></svg>" alt="Project 5">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <br>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+
+            <div class="video-container">
+                <h2>Website Navigation Guide</h2>
+                <div class="video-wrapper">
+                    <video controls preload="metadata" poster="images/video/navigation-poster.jpg">
+                        <source src="Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+                        <source src="videos/navigation-guide.webm" type="video/webm">
+                        <source src="videos/navigation-guide.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-description">
+                    <p><strong>How to Navigate This Portfolio:</strong></p>
+                    <ul>
+                        <li>Use the navigation menu at the top to access different sections</li>
+                        <li>Click on "Academic Results" to my view grades by year</li>
+                        <li>Explore "My Hobbies" to see my interests and activities</li>
+                        <li>Check out "Career Goals" to learn about my professional aspirations</li>
+                        <li>Use the "Logout" button to return to the login page</li>
+                    </ul>
+                    <p><em>Video file: videos/navigation-guide.mp4</em></p>
+                    <a href="videos/navigation-guide.mp4" class="back-button" style="display:inline-block;width:auto;" data-download="videos/navigation-guide.mp4">Download Video (MP4)</a>
+                </div>
+            </div>
+
+            <!-- Interactive widgets powered by Vue 3 and React 18 -->
+            <div id="vue-widget" class="widget-container"></div>
+            <div id="react-widget" class="widget-container"></div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Emmanuel Chingwe's Portfolio. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Toast and Download Manager Containers -->
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <div id="download-manager" class="download-manager" aria-live="polite"></div>
+
+    <!-- Year 1 Results Page -->
+    <div id="year1-page" style="display: none;">
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">LONDON'S PORTFOLIO</div>
+                    <ul class="nav-links">
+                        <li><a href="#home-page">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Academic Results</a>
+                            <div class="dropdown-content">
+                                <a href="#year1-page">Year 1 Results</a>
+                                <a href="#year2-page">Year 2 Results</a>
+                                <a href="#year3-page">Year 3 Results</a>
+                                <a href="#year4-page">Year 4 Results</a>
+                            </div>
+                        </li>
+                        <li><a href="#hobbies-page">My Hobbies</a></li>
+                        <li><a href="#goals-page">Career Goals</a></li>
+                        <li><a href="#" id="logout-link">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <h2>Year 1 Academic Results</h2>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credits</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>BIT101</td>
+                        <td>Introduction to Programming</td>
+                        <td>4</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>BIT102</td>
+                        <td>Web Development Fundamentals</td>
+                        <td>3</td>
+                        <td>B+</td>
+                    </tr>
+                    <tr>
+                        <td>BIT103</td>
+                        <td>Database Systems</td>
+                        <td>4</td>
+                        <td>A-</td>
+                    </tr>
+                    <tr>
+                        <td>BIT104</td>
+                        <td>Mathematics for Computing</td>
+                        <td>3</td>
+                        <td>B</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#home-page" class="back-button">Back to Home</a>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Emmanuel Chingwe's Portfolio. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Year 2 Results Page -->
+    <div id="year2-page" style="display: none;">
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">LONDON'S PORTFOLIO</div>
+                    <ul class="nav-links">
+                        <li><a href="#home-page">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Academic Results</a>
+                            <div class="dropdown-content">
+                                <a href="#year1-page">Year 1 Results</a>
+                                <a href="#year2-page">Year 2 Results</a>
+                                <a href="#year3-page">Year 3 Results</a>
+                                <a href="#year4-page">Year 4 Results</a>
+                            </div>
+                        </li>
+                        <li><a href="#hobbies-page">My Hobbies</a></li>
+                        <li><a href="#goals-page">Career Goals</a></li>
+                        <li><a href="#" id="logout-link">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <h2>Year 2 Academic Results</h2>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credits</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>BIT201</td>
+                        <td>Object-Oriented Programming</td>
+                        <td>4</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>BIT202</td>
+                        <td>Advanced Web Development</td>
+                        <td>4</td>
+                        <td>A-</td>
+                    </tr>
+                    <tr>
+                        <td>BIT203</td>
+                        <td>Data Structures and Algorithms</td>
+                        <td>4</td>
+                        <td>B+</td>
+                    </tr>
+                    <tr>
+                        <td>BIT204</td>
+                        <td>Software Engineering</td>
+                        <td>3</td>
+                        <td>A</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#home-page" class="back-button">Back to Home</a>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Emmanuel Chingwe's Portfolio. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Year 3 Results Page -->
+    <div id="year3-page" style="display: none;">
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">LONDON'S PORTFOLIO</div>
+                    <ul class="nav-links">
+                        <li><a href="#home-page">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Academic Results</a>
+                            <div class="dropdown-content">
+                                <a href="#year1-page">Year 1 Results</a>
+                                <a href="#year2-page">Year 2 Results</a>
+                                <a href="#year3-page">Year 3 Results</a>
+                                <a href="#year4-page">Year 4 Results</a>
+                            </div>
+                        </li>
+                        <li><a href="#hobbies-page">My Hobbies</a></li>
+                        <li><a href="#goals-page">Career Goals</a></li>
+                        <li><a href="#" id="logout-link">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <h2>Year 3 Academic Results</h2>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credits</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>BIT301</td>
+                        <td>Mobile Application Development</td>
+                        <td>4</td>
+                        <td>A-</td>
+                    </tr>
+                    <tr>
+                        <td>BIT302</td>
+                        <td>Web Security</td>
+                        <td>3</td>
+                        <td>B+</td>
+                    </tr>
+                    <tr>
+                        <td>BIT303</td>
+                        <td>Artificial Intelligence</td>
+                        <td>4</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>BIT304</td>
+                        <td>Cloud Computing</td>
+                        <td>3</td>
+                        <td>A-</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#home-page" class="back-button">Back to Home</a>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Emmanuel Chingwe's Portfolio. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Year 4 Results Page -->
+    <div id="year4-page" style="display: none;">
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">LONDON'S PORTFOLIO</div>
+                    <ul class="nav-links">
+                        <li><a href="#home-page">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Academic Results</a>
+                            <div class="dropdown-content">
+                                <a href="#year1-page">Year 1 Results</a>
+                                <a href="#year2-page">Year 2 Results</a>
+                                <a href="#year3-page">Year 3 Results</a>
+                                <a href="#year4-page">Year 4 Results</a>
+                            </div>
+                        </li>
+                        <li><a href="#hobbies-page">My Hobbies</a></li>
+                        <li><a href="#goals-page">Career Goals</a></li>
+                        <li><a href="#" id="logout-link">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <h2>Year 4 Academic Results</h2>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credits</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>BIT401</td>
+                        <td>Advanced Software Engineering</td>
+                        <td>4</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>BIT402</td>
+                        <td>Data Science</td>
+                        <td>4</td>
+                        <td>A-</td>
+                    </tr>
+                    <tr>
+                        <td>BIT403</td>
+                        <td>Final Year Project</td>
+                        <td>6</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>BIT404</td>
+                        <td>Professional Practice</td>
+                        <td>3</td>
+                        <td>B+</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#home-page" class="back-button">Back to Home</a>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Emmanuel Chingwe's Portfolio. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Hobbies Page -->
+    <div id="hobbies-page" style="display: none;">
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">LONDON'S PORTFOLIO</div>
+                    <ul class="nav-links">
+                        <li><a href="#home-page">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Academic Results</a>
+                            <div class="dropdown-content">
+                                <a href="#year1-page">Year 1 Results</a>
+                                <a href="#year2-page">Year 2 Results</a>
+                                <a href="#year3-page">Year 3 Results</a>
+                                <a href="#year4-page">Year 4 Results</a>
+                            </div>
+                        </li>
+                        <li><a href="#hobbies-page">My Hobbies</a></li>
+                        <li><a href="#goals-page">Career Goals</a></li>
+                        <li><a href="#" id="logout-link">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <h2>My Hobbies & Interests</h2>
+            
+            <!-- Basketball Section -->
+            <div class="profile-section">
+                <div class="profile-info">
+                    <h3>🏀 Basketball & NBA</h3>
+                    <p>Basketball is my biggest passion! I'm a huge NBA fan and love playing pickup games whenever I can. I follow all the major teams and players, with particular interest in the Lakers, Warriors, and Celtics. I enjoy analyzing game strategies, player statistics, and the evolution of the sport.</p>
+                    <p>My favorite players include LeBron James, Stephen Curry, and Jayson Tatum. I also love watching college basketball during March Madness and international competitions like the Olympics.</p>
+                </div>
+                <div class="hobby-gallery">
+                    <!-- Basketball Images - Replace with your own photos -->
+                    <!-- Recommended size: 400x300px, landscape format -->
+                    <img src="R.jpg" alt="Basketball Court Arena" class="hobby-img">
+                    <img src="OIP (1).webp" alt="Basketball Shot Moment" class="hobby-img">
+                    <img src="OIP.webp" alt="NBA Game" class="hobby-img">
+                    <img src="B.jpg" alt="Basketball Player" class="hobby-img">
+                </div>
+            </div>
+
+            <!-- Programming Section -->
+            <div class="profile-section">
+                <div class="profile-info">
+                    <h3>💻 Programming Projects</h3>
+                    <p>I enjoy working on personal programming projects to expand my skills. Recently, I've been exploring React and Vue.js frameworks to build interactive web applications. I also work on mobile app development using React Native and enjoy solving coding challenges on platforms like LeetCode and HackerRank.</p>
+                    <p>Some of my recent projects include a basketball statistics tracker app, a portfolio website (this one!), and various small utilities for automating daily tasks.</p>
+                </div>
+                <div class="hobby-gallery">
+                    <!-- Programming Images - Replace with your own photos -->
+                    <!-- Recommended size: 400x300px, landscape format -->
+                    <img src="OIP (2).webp" alt="Coding Setup" class="hobby-img">
+                    <img src="programmers-hands-coding-on-laptop-260nw-2006340548.webp" alt="Code on Screen" class="hobby-img">
+                </div>
+            </div>
+
+        
+            <div class="profile-section">
+                <div class="profile-info">
+                    <h3>📸 Photography</h3>
+                    <p>Photography is my creative outlet. I love capturing landscapes, urban scenes, and especially sports photography. I'm particularly interested in long-exposure photography and action shots. I often bring my camera to basketball games to capture the intensity and emotion of the sport.</p>
+                    <p>I use both digital and film cameras, and I enjoy the process of editing photos to bring out the best in each shot. My favorite subjects include cityscapes at golden hour and candid moments during sporting events.</p>
+                </div>
+                <div class="hobby-gallery">
+                
+                
+                    <img src="A.jpg" alt="Camera Equipment" class="hobby-img">
+                    <img src="C.jpg" alt="Photography" class="hobby-img">
+                </div>
+            </div>
+
+        
+            <div class="profile-section">
+                <div class="profile-info">
+                    <h3>🥾 Fitness & Hiking</h3>
+                    <p>Staying active is crucial for me, both mentally and physically. I love hiking and exploring nature trails - it helps me clear my mind and stay in shape. I try to go on at least one hiking trip every month, and I'm always looking for new trails to explore.</p>
+                    <p>I also enjoy working out at the gym, focusing on strength training and cardio. Basketball keeps me active too, and I play pickup games regularly with friends.</p>
+                </div>
+                <div class="hobby-gallery">
+                
+                    <img src="GG.jpg" alt="Hiking Trail" class="hobby-img">
+                    <img src="G.jpg" alt="Gym Workout" class="hobby-img">
+                </div>
+            </div>
+
+            
+            <div class="profile-section">
+                <div class="profile-info">
+                    <h3>📚 Reading & Learning</h3>
+                    <p>I'm an avid reader of technology blogs, science fiction, and personal development books. Continuous learning is important to me, and I'm always looking for new ways to expand my knowledge. I particularly enjoy books about basketball strategy, technology trends, and biographies of successful people.</p>
+                    <p>Some of my favorite books include "The Lean Startup" by Eric Ries, "The Mamba Mentality" by Kobe Bryant, and various programming and web development guides.</p>
+                </div>
+                <div class="hobby-gallery">
+                   
+                    <img src="download.jpg" alt="Books" class="hobby-img">
+                    <img src="RR.jpg" alt="Reading" class="hobby-img">
+                </div>
+            </div>
+
+            <a href="#home-page" class="back-button">Back to Home</a>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Emmanuel Chingwe's Portfolio. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <div id="goals-page" style="display: none;">
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">LONDON'S PORTFOLIO</div>
+                    <ul class="nav-links">
+                        <li><a href="#home-page">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Academic Results</a>
+                            <div class="dropdown-content">
+                                <a href="#year1-page">Year 1 Results</a>
+                                <a href="#year2-page">Year 2 Results</a>
+                                <a href="#year3-page">Year 3 Results</a>
+                                <a href="#year4-page">Year 4 Results</a>
+                            </div>
+                        </li>
+                        <li><a href="#hobbies-page">My Hobbies</a></li>
+                        <li><a href="#goals-page">Career Goals</a></li>
+                        <li><a href="#" id="logout-link">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <h2>Career Goals</h2>
+            <div class="profile-section">
+                <div class="profile-info">
+                    <h3>Short-term Goals (1-2 years)</h3>
+                    <ul>
+                        <li>Secure a position as a junior full-stack developer</li>
+                        <li>Master React and Node.js frameworks</li>
+                        <li>Contribute to open-source projects</li>
+                        <li>Build a portfolio of real-world applications</li>
+                    </ul>
+                    
+                    <h3>Medium-term Goals (3-5 years)</h3>
+                    <ul>
+                        <li>Advance to a senior developer role</li>
+                        <li>Specialize in either front-end or back-end development</li>
+                        <li>Mentor junior developers</li>
+                        <li>Lead development teams on projects</li>
+                    </ul>
+                    
+                    <h3>Long-term Goals (5+ years)</h3>
+                    <ul>
+                        <li>Become a tech lead or engineering manager</li>
+                        <li>Start my own tech company or startup</li>
+                        <li>Contribute to technological innovations in education</li>
+                        <li>Teach programming part-time</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#home-page" class="back-button">Back to Home</a>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Emmanuel Chingwe's Portfolio. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Vue 3 (latest) -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <!-- React 18 (latest) -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <script src="script.js"></script></body></html>
